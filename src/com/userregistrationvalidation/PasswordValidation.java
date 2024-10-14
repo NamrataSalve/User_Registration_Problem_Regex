@@ -9,7 +9,7 @@ public class PasswordValidation {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter Password: ");
         String password = sc.next();
-        String regex = "^[A-Z][a-z0-9@#$%]{7,19}$";
+        String regex = "^^[A-Z](?=.*[0-9])[a-zA-Z0-9@#$%]{7,19}$";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(password);
         if (matcher.matches())
